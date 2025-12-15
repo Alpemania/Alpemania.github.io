@@ -44,7 +44,7 @@
          </div>
          <div class="slide">
             <img src="Images/image-3.svg" alt="slide3">
-            <div class="slide-text">Slide 3 — Encore du texte random</div>
+            <div class="slide-text">Slide 3 — Encore du texte</div>
          </div>
       </section>
 
