@@ -1,0 +1,19 @@
+# Recommended Apache rules (ignored by GitHub Pages). Useful when hosting on Apache.
+Options -Indexes
+RewriteEngine On
+
+# Redirect all requests to index.php (single-page fallback)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+  Header set Feature-Policy "vibrate 'none'"
+</IfModule>
+
+# UTF-8
+AddDefaultCharset UTF-8
